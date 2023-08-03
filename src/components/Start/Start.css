@@ -1,0 +1,162 @@
+.start-page {
+  background: #6B63DD;
+}
+
+.start-header {
+  background: #6B63DD;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start-header h1 {
+  margin-left: 50px;
+  font-size: 2em;
+  color: #fff;
+}
+
+.start-header span {
+  background: #3D3A50;
+  border: none;
+  border-radius: 50px;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.start-header span:hover {
+  background: #000;
+  transition: .5s;
+}
+
+.start-header a {
+  text-decoration: none;
+  color: #F7F7F7;
+  font-weight: 400;
+  font-size: 1.2em;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.btn-main {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: #FDE69A;
+  border-radius: 50px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  margin-right: 50px;
+}
+
+.btn-main:hover {
+  background: #fff;
+  transition: .5s;
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  line-height: 16px;
+  word-wrap: break-word
+}
+
+.btn-text a {
+  color: #1E2225;
+}
+
+.start-hero {
+  background: #6B63DD;
+}
+
+.start-hero {
+  height: 600px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.left-position {
+  margin-left: 200px;
+}
+
+.right-position {
+  margin-right: 200px;
+}
+
+
+.left-position h1 {
+  color: #F7F7F7;
+  font-size: 4em;
+  max-width: 500px;
+}
+
+.left-position h3 {
+  font-size: 1.1em;
+  color: #F7F7F7;
+}
+
+.start-image {
+  height: 600px;
+  display: flex;
+}
+
+.img-right {
+  margin-right: 100px;
+}
+
+.start-overview {
+  background: #6B63DD;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 
+}
+
+.image-abstract img {
+  height: 500px;
+}
+
+.text-about-course section {
+  color: #F7F7F7;
+}
+
+@media (max-width: 380px) {
+  .start-hero {
+    margin-top: 20px;
+    align-items: start;
+  }
+
+  .start-header h1 {
+    font-size: 1.2em;
+  }
+
+  .left-position {
+    margin-left: 5px;
+  }
+
+  .left-position h1 {
+    font-size: 3em;
+    text-align: left;
+  }
+
+  .left-position h3 {
+    font-size: 1em;
+    color: #F7F7F7;
+    text-align: left;
+  }
+
+  .btn-main {
+    height: 20px;
+    width: auto;
+  }
+
+  .start-image {
+    display: none;
+  }
+}
