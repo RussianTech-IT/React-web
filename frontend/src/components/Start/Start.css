@@ -59,8 +59,7 @@
 
 .btn-text {
   font-size: 0.9em;
-  font-weight: 600;
-  line-height: 16px;
+  line-height: 10px;
   word-wrap: break-word
 }
 
@@ -79,7 +78,6 @@
   align-items: center;
   justify-content: space-between;
 }
-
 
 .left-position {
   margin-left: 200px;
@@ -115,21 +113,48 @@
   height: auto;
   display: flex;
   justify-content: space-between;
-  margin: 
+  margin-top: 100px;
 }
 
 .image-abstract img {
   height: 500px;
+  margin-left: 200px;
 }
 
 .text-about-course section {
   color: #F7F7F7;
+  margin-right: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  color: #6B63DD;
+  margin-top: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #000;
+  margin-top: 10px;
 }
 
 @media (max-width: 380px) {
   .start-hero {
     margin-top: 20px;
-    align-items: start;
+    align-items: center;
+    flex-direction: column;
   }
 
   .start-header h1 {
@@ -157,6 +182,12 @@
   }
 
   .start-image {
+    margin-top: -100px;
+    margin-right: -200px;
+    width: 350px;
+  }
+
+  .image-abstract {
     display: none;
   }
 }
