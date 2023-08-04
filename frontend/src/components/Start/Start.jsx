@@ -27,13 +27,40 @@ function Start() {
 
       {/* overview */}
       <div className="start-overview">
-        <div className="image-abstract">
+        <div className="image-abstract"><br /><br /><br /><br />
           <img src="./home_abstract.webp" alt="" />
         </div>
         <div className="text-about-course">
           <section>
             <div className="card">
-              <h1>Card about</h1>
+              <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
+              <h2 className="card-title">Frontend</h2>
+              <p className="card-description">Создание красивого и интерактивного <br /> пользовательского интерфейса</p>
+            </div>
+            <div className="card">
+              <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
+              <h2 className="card-title">Backend</h2>
+              <p className="card-description">Разработка мощных и безопасных <br /> серверных приложений</p>
+            </div>
+            <div className="card">
+              <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
+              <h2 className="card-title">Mobile</h2>
+              <p className="card-description">Создание мобильных приложений для <br /> iOS и Android платформ</p>
+            </div>
+            <div className="card">
+              <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
+              <h2 className="card-title">Заголовок карточки 4</h2>
+              <p className="card-description">Описание карточки 4</p>
+            </div>
+            <div className="card">
+              <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
+              <h2 className="card-title">Заголовок карточки 4</h2>
+              <p className="card-description">Описание карточки 4</p>
+            </div>
+            <div className="card">
+              <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
+              <h2 className="card-title">Заголовок карточки 4</h2>
+              <p className="card-description">Описание карточки 4</p>
             </div>
           </section>
         </div>
