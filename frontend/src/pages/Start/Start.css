@@ -1,0 +1,283 @@
+.start-page {
+  background: #6B63DD;
+}
+
+.start-header {
+  background: #6B63DD;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start-header h1 {
+  margin-left: 50px;
+  font-size: 2em;
+  color: #fff;
+}
+
+.start-header span {
+  background: #3D3A50;
+  border: none;
+  border-radius: 50px;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.start-header span:hover {
+  background: #000;
+  transition: .5s;
+}
+
+.start-header a {
+  text-decoration: none;
+  color: #F7F7F7;
+  font-weight: 400;
+  font-size: 1.2em;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.btn-main {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: #FDE69A;
+  border-radius: 50px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  margin-right: 50px;
+}
+
+.btn-main:hover {
+  background: #fff;
+  transition: .5s;
+}
+
+.btn-text {
+  font-size: 0.9em;
+  line-height: 10px;
+  word-wrap: break-word
+}
+
+.btn-text a {
+  color: #1E2225;
+}
+
+.start-hero {
+  background: #6B63DD;
+}
+
+.start-hero {
+  height: 600px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-position {
+  margin-left: 200px;
+}
+
+.right-position {
+  margin-right: 200px;
+}
+
+
+.left-position h1 {
+  color: #F7F7F7;
+  font-size: 4em;
+  max-width: 500px;
+}
+
+.left-position h3 {
+  font-size: 1.1em;
+  color: #F7F7F7;
+}
+
+.start-image {
+  height: 600px;
+  display: flex;
+}
+
+.img-right {
+  margin-right: 100px;
+}
+
+.start-overview {
+  background: #6B63DD;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.image-abstract {
+  display: flex;
+  margin-top: 30px;
+}
+
+.image-abstract img {
+  height: 500px;
+  margin-left: 200px;
+}
+
+.text-about-course section {
+  color: #F7F7F7;
+  margin-right: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  color: #6B63DD;
+  margin-top: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #000;
+  margin-top: 10px;
+}
+
+.start-footer {
+  width: 100%;
+  margin-top: 30px;
+  height: 330px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.start-container-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.footer-left {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-right {
+  margin-top: 20px;
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  justify-content: center;
+}
+
+.social-media-icons img {
+  height: 40px;
+}
+
+.start-footer h1,
+h2,
+h3,
+h4,
+p {
+  color: #fff;
+}
+
+.footer-email a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-email a:hover {
+  color: #FDE69A;
+}
+
+@media (max-width: 600px) {
+  .start-hero {
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .start-header h1 {
+    font-size: 1.2em;
+    margin-left: 10px;
+  }
+
+  .btn-main {
+    margin-right: 10  px;
+  }
+
+  .left-position {
+    margin-left: 5px;
+  }
+
+  .left-position h1 {
+    font-size: 3em;
+    text-align: left;
+  }
+
+  .left-position h3 {
+    font-size: 1em;
+    color: #F7F7F7;
+    text-align: left;
+  }
+
+  .btn-main {
+    height: 20px;
+    width: auto;
+  }
+
+  .start-image {
+    margin-top: -100px;
+    margin-right: -200px;
+    width: 350px;
+  }
+
+  .image-abstract {
+    display: none;
+  }
+
+  .text-about-course {
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-about-course section {
+    display: flex;
+    flex-direction: column;
+    margin-right: -200px;
+    gap: 20px;
+    justify-content: center;
+    margin-left: 30px;
+  }
+
+  .start-footer {
+    height: auto;
+  }
+
+  .start-container-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-left {
+    font-size: 1em;
+  }
+}
