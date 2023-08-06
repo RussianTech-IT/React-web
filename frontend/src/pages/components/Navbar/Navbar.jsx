@@ -10,7 +10,7 @@ function Navbar() {
             <li><a href="/">Главная</a></li>
             <li><a href="/">Обучение</a></li>
             <li><a href="/">Блог</a></li>
-            <li><a href="/">Связь</a></li>
+            <li><a href="/form">Связь</a></li>
         </nav>
     </header>
   )
