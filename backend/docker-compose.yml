@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+      - 5432:5432
+
+
+  api:
+    build: images/api
+    restart: always
+    volumes:
+      - "./volumes/api/flask:/app"
+      - "./volumes/api/db:/db"
+
+  nginx:
+    image: nginx:latest
+
+    ports:
+      - "80:80"
+    
+    volumes:
+      - "../frontend/build:/var/www/html"
+      - "./volumes/nginx/errors:/var/www/html/errors"
+      - "./volumes/nginx/conf.d:/etc/nginx/conf.d"
