@@ -55,6 +55,7 @@
 .btn-main:hover {
   background: #fff;
   transition: .5s;
+  cursor: pointer;
 }
 
 .btn-text {
@@ -63,7 +64,7 @@
   word-wrap: break-word
 }
 
-.btn-text a {
+.btn-text {
   color: #1E2225;
 }
 
@@ -134,7 +135,7 @@
   gap: 20px;
 }
 
-.card {
+.start-card {
   display: flex;
   flex-direction: column;
   align-items: left;

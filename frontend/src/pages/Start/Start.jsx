@@ -7,11 +7,13 @@ function Start() {
       {/* header */}
       <header className='start-header'>
         <h1>Russian Tech</h1>
-        <div className='btn-main'>
-          <div className='btn-text'>
-            <Link to='/home'>Начать</Link>
+        <Link to='/home'>
+          <div className='btn-main'>
+            <div className='btn-text'>
+              Начать
+            </div>
           </div>
-        </div>
+        </Link>
       </header>
 
       {/* hero */}
@@ -32,32 +34,32 @@ function Start() {
         </div>
         <div className="text-about-course">
           <section>
-            <div className="card">
+            <div className="start-card">
               <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
               <h2 className="card-title">Introudction</h2>
               <p className="card-description">Ознакомьтесь с основными терминами <br />и другими вещами </p>
             </div>
-            <div className="card">
+            <div className="start-card">
               <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
               <h2 className="card-title">Frontend</h2>
               <p className="card-description">Создание красивого и интерактивного <br /> пользовательского интерфейса</p>
             </div>
-            <div className="card">
+            <div className="start-card">
               <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
               <h2 className="card-title">Backend</h2>
               <p className="card-description">Разработка мощных и безопасных <br /> серверных приложений</p>
             </div>
-            <div className="card">
+            <div className="start-card">
               <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
               <h2 className="card-title">Mobile</h2>
               <p className="card-description">Создание мобильных приложений для <br /> iOS и Android платформ</p>
             </div>
-            <div className="card">
+            <div className="start-card">
               <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
               <h2 className="card-title">Languages</h2>
               <p className="card-description">Выберите свой рабочий язык под <br />свои цели и задачи</p>
             </div>
-            <div className="card">
+            <div className="start-card">
               <div className="card-icon"><img src="./icons/frontend.svg" alt="" /></div>
               <h2 className="card-title">More</h2>
               <p className="card-description">Дальше - больше! Изучите дорожные <br />карты по изучению</p>
