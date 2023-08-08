@@ -9,3 +9,13 @@
     margin-left: 50px;
     margin-right: 50px;
 }
+
+@media (max-width: 600px) {
+    .home {
+    }
+.home section {
+display: flex;
+    flex-direction: column;
+
+}
+}

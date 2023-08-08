@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="home">
       <Navbar />
-      <div className="list-language">
+      {/* <div className="list-language">
         <section>
           <CardLanguage
             imageSrc="./icons/languages/introduction_card.svg"
@@ -65,7 +65,7 @@ function Home() {
             description="Крутой"
             hoverText="Обучение Python  с нуля" />
         </section>
-      </div>
+      </div> */}
     </div>
 
   )
