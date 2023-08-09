@@ -7,18 +7,18 @@ function Home() {
   return (
     <div className="home">
       <Navbar />
-      {/* <div className="list-language">
+      <div className="list-language">
         <section>
           <CardLanguage
             imageSrc="./icons/languages/introduction_card.svg"
             title="Введение"
             description="Введение в основные понятия и терминологии"
-            hoverText="Ознакомьтесь с сленгом в мире IT" />
+            hoverText="Познакомьтесь с миром IT" />
           <CardLanguage
             imageSrc="./icons/languages/python.svg"
             title="Python"
-            description="Крутой"
-            hoverText="Обучение Python  с нуля" />
+            description="Введение в язык и принципы работы с ним"
+            hoverText="Обучение Python с нуля" />
           <CardLanguage
             imageSrc="./icons/languages/cplusplus.svg"
             title="C++"
@@ -65,9 +65,8 @@ function Home() {
             description="Крутой"
             hoverText="Обучение Python  с нуля" />
         </section>
-      </div> */}
+      </div>
     </div>
-
   )
 }
 
