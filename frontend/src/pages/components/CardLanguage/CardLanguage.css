@@ -1,6 +1,6 @@
 .card {
     --bg: #f7f7f8;
-    --hover-bg: #2a35ff;
+    --hover-bg: black;
     --hover-text: #fff;
     max-width: 400px;
     text-align: center;
