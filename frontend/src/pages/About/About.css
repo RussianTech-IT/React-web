@@ -44,3 +44,24 @@
     height: 600px;
     margin-top: 150px;
 }
+
+@media (max-width: 600px) {
+    .container-card-about {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-left-position-cards {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-left: 1px;
+    }
+    .about-right-position {
+        display: flex;
+        justify-content: center;
+    }
+    .about-right-position img {
+        height: 300px;
+        margin-right: -100px;
+    }
+}

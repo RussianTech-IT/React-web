@@ -18,12 +18,12 @@ function About() {
                 animate="visible"
                 variants={variants} className="container-card-about">
                 <div className="about-left-position-cards">
-                    <CardAbout title="Frontend" />
-                    <CardAbout title="Frontend" />
-                    <CardAbout title="Frontend" />
-                    <CardAbout title="Frontend" />
-                    <CardAbout title="Frontend" />
-                    <CardAbout title="Frontend" />
+                    <CardAbout title="Education" description="Наша платформа поможет людям освоить современные языки программирования" />
+                    <CardAbout title="Quality" description="Вы сможете ориентироваться в основах программирования, высоконагруженные приложения" />
+                    <CardAbout title="Frontend" description="" />
+                    <CardAbout title="Frontend" description="" />
+                    <CardAbout title="Frontend" description="" />
+                    <CardAbout title="Frontend" description="" />
                 </div>
                 <div className="about-right-position">
                     <img src="./abstract_image2.png" alt="" />

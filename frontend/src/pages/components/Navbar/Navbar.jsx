@@ -13,7 +13,7 @@ function Navbar() {
 				<ul class="menu">
 					<li><a href="/home">Главная</a></li>
 					<li><a href="/about">О нас</a></li>
-					<li><a href="/">Блог</a></li>
+					<li><a href="/blog">Блог</a></li>
 					<li><a href="/">Связь</a></li>
 				</ul>
 			</nav>

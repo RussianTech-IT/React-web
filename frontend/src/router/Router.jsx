@@ -5,6 +5,7 @@ import Start from '../pages/Start/Start'
 import Loader from '../pages/components/Loader/Loader'
 import Home from '../pages/Home/Home'
 import About from '../pages/About/About'
+import Blog from '../pages/Blog/Blog';
 
 function Router() {
   return (
@@ -13,6 +14,7 @@ function Router() {
         <Route path='/' element={<Start />} />
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path='/blog' element={<Blog />} />
         <Route path='*' element={<div>404</div>} />
       </Routes>
     </Suspense>
