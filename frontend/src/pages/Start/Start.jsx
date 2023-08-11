@@ -1,7 +1,7 @@
 import React from 'react'
 import './Start.css'
 import { Link } from 'react-router-dom'
-import Footer from '../components/Footer/Footer'
+import Footer from '../../components/Footer/Footer'
 import { motion } from 'framer-motion'
 
 function Start() {

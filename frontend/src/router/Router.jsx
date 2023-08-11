@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Suspense } from 'react';
 import Start from '../pages/Start/Start'
-import Loader from '../pages/components/Loader/Loader'
+import Loader from '../../src/components/Loader/Loader'
 import Home from '../pages/Home/Home'
 import About from '../pages/About/About'
 import Blog from '../pages/Blog/Blog';

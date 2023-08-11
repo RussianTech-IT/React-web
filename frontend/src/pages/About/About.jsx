@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '../components/Navbar/Navbar'
-import CardAbout from '../components/CardAbout/CardAbout'
+import Navbar from '../../components/Navbar/Navbar'
+import CardAbout from '../../components/CardAbout/CardAbout'
 import './About.css'
 import { motion } from 'framer-motion'
-import Footer from '../components/Footer/Footer'
+import Footer from '../../components/Footer/Footer'
 
 function About() {
     const variants = {
