@@ -11,11 +11,9 @@
 }
 
 @media (max-width: 600px) {
-    .home {
-    }
-.home section {
-display: flex;
-    flex-direction: column;
+    .home section {
+        display: flex;
+        flex-direction: column;
 
-}
+    }
 }

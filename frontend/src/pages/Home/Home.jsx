@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import Navbar from '../components/Navbar/Navbar'
 import CardLanguage from '../components/CardLanguage/CardLanguage'
+import Footer from '../components/Footer/Footer'
 
 function Home() {
   return (
@@ -66,6 +67,7 @@ function Home() {
             hoverText="Обучение Python  с нуля" />
         </section>
       </div>
+      <Footer />
     </div>
   )
 }

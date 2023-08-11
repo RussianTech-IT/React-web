@@ -1,11 +1,23 @@
 import React from 'react'
 import './Start.css'
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer/Footer'
+import { motion } from 'framer-motion'
+
 function Start() {
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
-    <div className='start-page'>
+    <div
+      className='start-page'>
       {/* header */}
-      <header className='start-header'>
+      <motion.header
+        initial="hidden"
+        animate="visible"
+        variants={variants} className='start-header'>
         <h1>Russian Tech</h1>
         <Link to='/home'>
           <div className='btn-main'>
@@ -14,10 +26,13 @@ function Start() {
             </div>
           </div>
         </Link>
-      </header>
+      </motion.header>
 
       {/* hero */}
-      <div className="start-hero">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variants} className="start-hero">
         <div className="left-position">
           <h1>Раскройте свой потенциал в IT</h1>
           <h3>Создавайте, пишите код, тестируйте, автоматизируйте</h3>
@@ -25,10 +40,13 @@ function Start() {
         <div className="right-position">
           <img src="./start_img.svg" className='start-image' alt="" />
         </div>
-      </div>
+      </motion.div>
 
       {/* overview */}
-      <div className="start-overview">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variants} className="start-overview">
         <div className="image-abstract">
           <img src="./home_abstract.webp" alt="" />
         </div>
@@ -66,32 +84,10 @@ function Start() {
             </div>
           </section>
         </div>
-      </div>
+      </motion.div>
 
       {/* footer */}
-      <footer className="start-footer">
-        <div className="start-container-footer">
-          <div className="footer-left">
-            <h1>Russian Tech - new features!</h1>
-            <h4>Платформа для обучения программирования</h4>
-          </div>
-          <div className="footer-right">
-            <p align="center">Social media</p>
-            <div className="social-media-icons">
-              <a href="/"><img src="./icons/github.svg" alt="" /></a>
-              <a href="/"><img src="./icons/vk.svg" alt="" /></a>
-              <a href="/"><img src="./icons/telegram.svg" alt="" /></a>
-            </div>
-            <br /><hr /><br />
-            <div className="footer-email">
-              <p align="center">email: </p>
-              <a href="mailto:russiantechorg@gmail.com?subject=Письмо Russian Tech">russiantechorg@gmail.com</a>
-            </div>
-            <br /><hr /><br />
-            <h3 align="center">Happy coding!</h3> <br />
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

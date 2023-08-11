@@ -156,7 +156,7 @@
   margin-top: 10px;
 }
 
-.start-footer {
+/* .start-footer {
   width: 100%;
   margin-top: 30px;
   height: 330px;
@@ -207,7 +207,7 @@ p {
 
 .footer-email a:hover {
   color: #FDE69A;
-}
+} */
 
 @media (max-width: 600px) {
   .start-hero {
@@ -269,7 +269,7 @@ p {
     margin-left: 50px;
   }
 
-  .start-footer {
+  /* .start-footer {
     height: auto;
   }
 
@@ -280,5 +280,5 @@ p {
 
   .footer-left {
     font-size: 1em;
-  }
+  } */
 }

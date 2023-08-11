@@ -11,8 +11,8 @@ function Navbar() {
 				<input type="checkbox" id="menu-toggle" />
 				<label for="menu-toggle" class="menu-icon">&#9776;</label>
 				<ul class="menu">
-					<li><a href="/">Главная</a></li>
-					<li><a href="/">О нас</a></li>
+					<li><a href="/home">Главная</a></li>
+					<li><a href="/about">О нас</a></li>
 					<li><a href="/">Блог</a></li>
 					<li><a href="/">Связь</a></li>
 				</ul>
