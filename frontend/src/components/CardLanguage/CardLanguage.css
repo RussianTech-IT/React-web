@@ -1,3 +1,6 @@
+.link-route-card-language{
+    text-decoration: none;
+}
 .card {
     --bg: #f7f7f8;
     --hover-bg: black;

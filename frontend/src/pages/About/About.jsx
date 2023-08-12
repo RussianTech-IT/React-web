@@ -16,9 +16,10 @@ function About() {
             <motion.div
                 initial="hidden"
                 animate="visible"
-                variants={variants} className="container-card-about">
+                variants={variants}
+                className="container-card-about">
                 <div className="about-left-position-cards">
-                    <CardAbout title="Education" description="Наша платформа поможет людям освоить современные языки программирования" />
+                    <CardAbout title="Education" description="Мы помогаем людям осваивать современные языки программирования" />
                     <CardAbout title="Quality" description="Вы сможете ориентироваться в основах программирования, высоконагруженные приложения" />
                     <CardAbout title="Frontend" description="" />
                     <CardAbout title="Frontend" description="" />
@@ -27,6 +28,22 @@ function About() {
                 </div>
                 <div className="about-right-position">
                     <img src="./abstract_image2.png" alt="" />
+                </div>
+            </motion.div>
+            <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={variants}
+                className='about-text-block'>
+                <div className="about-text-container">
+                    <div className="bg-card-about-text">
+                        <p>
+                            На нашей платформе можно заниматься в любой момент без привязки к расписанию
+                            Научитесь создавать полноценные веб-приложения на всех уровнях: от простых программ до высоконагруженных сервисов и систем.
+                            У нас есть чаты по разным направлениям, где вам с радостью помогут с вашими проблемами.
+                            А также узнаете, как создавать качественное программное обеспечение и интегрировать его в инфраструктуру.
+                        </p>
+                    </div>
                 </div>
             </motion.div>
             <Footer />

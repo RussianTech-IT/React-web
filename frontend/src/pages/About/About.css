@@ -5,20 +5,6 @@
     animation: gradient-animation 18s ease infinite;
 }
 
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 .container-card-about {
     display: flex;
     gap: 20px;
@@ -44,7 +30,32 @@
     margin-top: 150px;
 }
 
+.about-text-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.about-text-container {
+    width: 1000px;
+}
+
+.bg-card-about-text {
+    background: rgba(0, 0, 0, .6);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.bg-card-about-text p {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
 @media (max-width: 600px) {
+    .about-text-container {
+        width: 90%;
+    }
+
     .container-card-about {
         display: flex;
         flex-direction: column;
@@ -65,5 +76,19 @@
     .about-right-position img {
         height: 300px;
         margin-right: -100px;
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
