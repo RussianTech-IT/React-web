@@ -1,3 +1,7 @@
+.home {
+    background: rgb(119, 0, 255);
+}
+
 .home section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
