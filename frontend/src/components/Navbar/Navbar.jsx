@@ -1,5 +1,5 @@
-import React from 'react'
-import './Navbar.css'
+import React from 'react';
+import './Navbar.css';
 
 function Navbar() {
 	return (
@@ -14,11 +14,11 @@ function Navbar() {
 					<li><a href="/home">Главная</a></li>
 					<li><a href="/about">О нас</a></li>
 					<li><a href="/blog">Блог</a></li>
-					<li><a href="/">Связь</a></li>
+					<li><a href="/feedback">Связь</a></li>
 				</ul>
 			</nav>
 		</header>
 	);
-};
+}
 
-export default Navbar
+export default Navbar;
