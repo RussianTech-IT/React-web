@@ -1,0 +1,31 @@
+{
+    "external":[
+        {
+            "id": 0,
+            "label": "python test",
+            "topic": "python|test|beginer",
+            "author": "Rutech",
+            "image": "images/default.png",
+            "source": "http://youtube.com/python",
+            "дополнительная инфа": "бля мне лень менять местами, по идее external это не наши статьи, но пока похер"
+        },
+        {
+            "id": 0,
+            "label": "c++ test",
+            "topic": "c++|test|medle",
+            "author": "RuTech",
+            "image": "images/default.png",
+            "source": "http://youtube.com/c++"
+        }
+    ],
+    "internal": [
+        {
+            "id": 0,
+            "label": "c++ test book",
+            "topic": "c++|test|medle|book",
+            "author": "test c++ author",
+            "image": "images/default.png",
+            "file": "test.pdf"
+        }
+    ]
+}

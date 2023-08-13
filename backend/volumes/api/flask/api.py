@@ -1,6 +1,6 @@
 from flask import jsonify, request, send_file
-from mysql.connector import connect
-
+import json
+from fuzzywuzzy import fuzz
 
 
 """
@@ -20,14 +20,6 @@ id | label | topic | author | file_path | icon_path |
 
 """
 
-
-use = "USE data;"
-topic_search = "SELECT * FROM resource WHERE topic LIKE '%{}%'"
-label_search = "SELECT * FROM resource WHERE label LIKE '%{}%'"
-author_search = "SELECT * FROM resource WHERE author LIKE '%{}%'"
-id_search = "SELECT * FROM resource WHERE id LIKE {}"
-describe = "DESCRIBE resource"
-
 def main():
     args = dict(request.args)
     return jsonify(args)
@@ -37,46 +29,71 @@ def search():
 
 # get file path from db
 def get():
-    connection = connect(host="db", user="root",password="12345")
     args = dict(request.args)
 
     topic = args.get("topic")
     label = args.get("label")
     author = args.get("author")
     ident = args.get("id")
+    source = args.get("source")
 
-    if topic:
-        with connection.cursor() as cursor:
-            # return jsonify(lang_search.format(str(lang)))
-            cursor.execute(use)
-            cursor.execute(topic_search.format(str(topic)))
-            result = cursor.fetchall()
-            return jsonify(result)
+    if source == "external":
+        db = json.load(open("/db/db.json"))["external"]
+        lst = []
+        if topic != "":
+            for i in db:
+                top = i["topic"]
+                if fuzz.ratio(top,topic) > 30:
+                    lst.append(i)
+        
+        if label:
+            for i in db:
+                top = i["label"]
+                if fuzz.ratio(top,label) > 30:
+                    lst.append(i)
+        if author:
+            for i in db:
+                top = i["author"]
+                if fuzz.ratio(top,author) > 30:
+                    lst.append(i)
+        if ident:
+            for i in db:
+                top = i["id"]
+                if fuzz.ratio(str(top),ident) > 30:
+                    lst.append(i)
+
+        return jsonify(lst)
+
+    elif source == "internal":
+        db = json.load(open("/db/db.json"))["internal"]
+        lst = []
+        if topic != "":
+            for i in db:
+                top = i["topic"]
+                if fuzz.ratio(top,topic) > 30:
+                    lst.append(i)
+        
+        if label:
+            for i in db:
+                top = i["label"]
+                if fuzz.ratio(top,label) > 30:
+                    lst.append(i)
+        if author:
+            for i in db:
+                top = i["author"]
+                if fuzz.ratio(top,author) > 30:
+                    lst.append(i)
+        if ident:
+            for i in db:
+                top = i["id"]
+                if fuzz.ratio(str(top),ident) > 30:
+                    lst.append(i)
+
+        return jsonify(lst)
+
     
-    if label:
-        with connection.cursor() as cursor:
-            # return jsonify(lang_search.format(str(lang)))
-            cursor.execute(use)
-            cursor.execute(label_search.format(str(label)))
-            result = cursor.fetchall()
-            return jsonify(result)
-    if author:
-        with connection.cursor() as cursor:
-            # return jsonify(lang_search.format(str(lang)))
-            cursor.execute(use)
-            cursor.execute(author_search.format(str(author)))
-            result = cursor.fetchall()
-            return jsonify(result)
-    if ident:
-        with connection.cursor() as cursor:
-            # return jsonify(lang_search.format(str(lang)))
-            cursor.execute(use)
-            cursor.execute(id_search.format(str(ident)))
-            result = cursor.fetchall()
-            return jsonify(result)
 
-    else:
-        return jsonify({"Error":"wrong request"})
+
 
 
 
@@ -84,10 +101,7 @@ def get():
 # get file from disk
 def file():
     args = dict(request.args)
-
     path = args.get("path")
-    if path:
-        final_path = "/db/"+path
-        return send_file(final_path)
-    else:
-        return jsonify({"Error": "wrong request"})
+    path1 = "/db/"+path
+    return send_file(path1)
+    
