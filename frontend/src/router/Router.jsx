@@ -31,18 +31,18 @@ function Router() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/feedback' element={<Feedback />} />
         {/* languages routes */}
-        <Route path='/language/introduction' element={<Introduction />}/>
-        <Route path='/language/python' element={<Python />}/>
-        <Route path='/language/cpp' element={<Cpp />}/>
-        <Route path='/language/javascript' element={<JavaScript />}/>
-        <Route path='/language/swift' element={<Swift />}/>
-        <Route path='/language/csharp' element={<CSharp />}/>
-        <Route path='/language/htmlcss' element={<HtmlCss />}/>
-        <Route path='/language/php' element={<PHP />}/>
-        <Route path='/language/java' element={<Java />}/>
-        <Route path='/language/kotlin' element={<Kotlin />}/>
-        <Route path='/language/rust' element={<Rust />}/>
-        
+        <Route path='/language/introduction' element={<Introduction />} />
+        <Route path='/language/python' element={<Python />} />
+        <Route path='/language/cpp' element={<Cpp />} />
+        <Route path='/language/javascript' element={<JavaScript />} />
+        <Route path='/language/swift' element={<Swift />} />
+        <Route path='/language/csharp' element={<CSharp />} />
+        <Route path='/language/htmlcss' element={<HtmlCss />} />
+        <Route path='/language/php' element={<PHP />} />
+        <Route path='/language/java' element={<Java />} />
+        <Route path='/language/kotlin' element={<Kotlin />} />
+        <Route path='/language/rust' element={<Rust />} />
+
         <Route path='*' element={<div>404</div>} />
       </Routes>
     </Suspense>
