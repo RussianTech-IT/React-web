@@ -18,75 +18,75 @@ function Home() {
       description: "Введение в основные понятия и терминологии",
       hoverText: "Познакомьтесь с миром IT",
       to: '/home'
-    },
-    {
+      },
+      {
       imageSrc: "./icons/languages/python.svg",
       title: "Python",
       description: "Введение в язык и принципы работы с ним",
       hoverText: "Обучение Python с нуля",
       to: '/home',
-    },
-    {
+      },
+      {
       imageSrc: "./icons/languages/cplusplus.svg",
       title: "C++",
-      description: "description",
-      hoverText: "Обучение C++ с нуля",
+      description: "Основы языка C++ и его применение",
+      hoverText: "Изучите C++ с нуля",
       to: '/home',
-    },
-    {
+      },
+      {
       imageSrc: "./icons/languages/javascript.svg",
       title: "JS",
-      description: "Крутой",
-      hoverText: "Обучение Python  с нуля",
+      description: "Основы языка JavaScript и его применение",
+      hoverText: "Изучите JavaScript с нуля",
       to: '/home',
-    },
-    {
+      },
+      {
       imageSrc: "./icons/languages/swift.svg",
       title: "Swift",
-      description: "Крутой",
-      hoverText: "Обучение Python  с нуля",
+      description: "Введение в язык Swift и его возможности",
+      hoverText: "Изучите Swift с нуля",
       to: '/home',
-    },
-    {
+      },
+      {
       imageSrc: "./icons/languages/csharp.svg",
       title: "C#",
-      description: "Крутой",
-      hoverText: "Обучение Python  с нуля",
+      description: "Основы языка C# и его применение",
+      hoverText: "Изучите C# с нуля",
       to: '/home',
-    },
-    {
+      },
+      {
       imageSrc: "./icons/languages/html_css.svg",
       title: "HTML & CSS",
-      description: "Крутой",
-      hoverText: "Обучение Python  с нуля",
+      description: "Основы HTML и CSS для создания веб-страниц",
+      hoverText: "Изучите HTML & CSS с нуля",
       to: '/home',
-    },
-    {
+      },
+      {
       imageSrc: "./icons/languages/php.svg",
       title: "PHP",
-      description: "Крутой",
-      hoverText: "Обучение PHP с нуля",
+      description: "Введение в язык PHP и создание динамических веб-сайтов",
+      hoverText: "Изучите PHP с нуля",
       to: '/home',
-    },
-    {
+      },
+      {
       imageSrc: "./icons/languages/java.svg",
       title: "Java",
-      description: "Крутой",
-      hoverText: "Обучение Python  с нуля",
+      description: "Основы языка Java и его применение",
+      hoverText: "Изучите Java с нуля",
       to: '/home',
-    },
-    {
+      },
+      {
       imageSrc: "./icons/languages/kotlin.svg",
       title: "Kotlin",
-      description: "Крутой",
-      hoverText: "Обучение Python  с нуля",
+      description: "Введение в язык Kotlin и его особенности",
+      hoverText: "Изучите Kotlin с нуля",
       to: '/home',
-    },
-    {
+      },
+      {
       imageSrc: "./icons/languages/rust.svg",
       title: "Rust",
-      description: "Крутой",
-      hoverText: "Обучение Python  с нуля",
+      description: "Основы языка Rust и его применение",
+      hoverText: "Изучите Rust с нуля",
       to: '/home',
     }
   ];
