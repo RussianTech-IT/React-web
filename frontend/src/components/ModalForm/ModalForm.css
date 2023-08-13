@@ -84,6 +84,8 @@
 
 .sign:hover {
     cursor: pointer;
+    background-color: rgb(134, 111, 205);
+    transition: .3s;
 }
 
 .social-message {
