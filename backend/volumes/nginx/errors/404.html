@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
   <head>
     <meta charset="UTF-8">
@@ -50,6 +50,24 @@
       color: #fff;
       margin-bottom: 50px;
     }
+    .span-bg {
+      background: white;
+      padding: 15px;
+      border-radius: 20px;
+    }
+    .span-bg:hover {
+      background: blueviolet;
+    }
+
+    .span-bg:hover>a {
+      color: white;
+    }
+    .back-btn{
+      color: #000;
+      font-size: 1.5em;
+      font-weight: 300;
+      text-decoration: none;
+    }
 
     @keyframes astronautFly {
       0% {
@@ -99,7 +117,7 @@
       }
     }
   </style>
-    <title>404 error</title>
+    <title>404</title>
   </head>
 
   <body>
@@ -107,10 +125,9 @@
       <h1>Russian Tech</h1>
     </div>
     <div class="text">
-      <div>ERROR</div>
-      <h1>404</h1>
+      <div>ERROR</div><br>
       <hr>
-      <div>Page Not Found</div>
+      <h1>404</h1>
     </div>
 
     <div class="astronaut">
@@ -118,6 +135,7 @@
         src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png"
         alt class="src">
     </div>
+    <span class="span-bg"><a class="back-btn" href="/home">Вернуться</a></span>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
 
