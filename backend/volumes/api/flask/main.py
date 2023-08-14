@@ -10,7 +10,7 @@ app = Flask(__name__)
 def main(): return api.main()
 
 
-@app.route("/file")
+@app.route("/file",methods=["GET"])
 def file(): return api.file()
 
 @app.route("/get")
