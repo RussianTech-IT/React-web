@@ -35,7 +35,7 @@ function Home() {
     },
     {
       imageSrc: "./icons/languages/javascript.svg",
-      title: "JS",
+      title: "JavaScript",
       description: "Основы языка JavaScript и его применение",
       hoverText: "Изучите JavaScript с нуля",
       to: '/language/javascript',
