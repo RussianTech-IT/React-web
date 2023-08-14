@@ -1,6 +1,7 @@
 from flask import jsonify, request, send_file
 import json
 from fuzzywuzzy import fuzz
+import os
 
 
 """
@@ -94,6 +95,16 @@ def get():
     
 
 
+
+def auth():
+    args = dict(request.args)
+    login = args.get("login")
+    passw = args.get("passw")
+
+    if os.environ.get("ADMIN_LOGIN") == login and os.environ.get("ADMIN_PASSW") == passw:
+        return jsonify({"login": "succses"})
+    else:
+        return jsonify({"login": "failed"})
 
 
 

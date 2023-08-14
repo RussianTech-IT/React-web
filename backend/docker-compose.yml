@@ -5,6 +5,9 @@ services:
   api:
     build: images/api
     restart: always
+    environment:
+      - ADMIN_LOGIN=admin
+      - ADMIN_PASSW=12345
     volumes:
       - "./volumes/api/flask:/app"
       - "./volumes/api/db:/db"
