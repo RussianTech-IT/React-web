@@ -16,6 +16,7 @@ services:
       - "80:80"
     
     volumes:
-      - "../frontend/build:/var/www/html"
+      - "../admin/build:/var/www/html/admin"
+      - "../frontend/build:/var/www/html/site"
       - "./volumes/nginx/errors:/var/www/html/errors"
       - "./volumes/nginx/conf.d:/etc/nginx/conf.d"
