@@ -1,0 +1,23 @@
+.container-course-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.back-icon-course-bar {
+    width: 20px;
+    user-select: none;
+}
+
+.back-icon-course-bar:hover {
+    cursor: pointer;
+    transform: translate3d(-5px, 0px,0px);
+}
+
+.title-props-course-bar {
+    font-size: 1.5em;
+    user-select: none;
+    color: #000;
+}
