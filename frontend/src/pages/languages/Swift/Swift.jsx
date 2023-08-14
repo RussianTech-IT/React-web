@@ -1,9 +1,12 @@
 import React from 'react'
 import './Swift.css'
+import CourseBar from '../../../components/CourseBar/CourseBar'
 
 function Swift() {
   return (
-    <div>Swift</div>
+    <div>
+      <CourseBar languageName="Swift" />
+    </div>
   )
 }
 

@@ -1,9 +1,11 @@
 import React from 'react'
 import './JavaScript.css'
-
+import CourseBar from '../../../components/CourseBar/CourseBar'
 function JavaScript() {
   return (
-    <div>JavaScript</div>
+    <div>
+      <CourseBar languageName="JavaScript" />
+    </div>
   )
 }
 

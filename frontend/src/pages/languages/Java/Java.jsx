@@ -1,9 +1,12 @@
 import React from 'react'
 import './Java.css'
+import CourseBar from '../../../components/CourseBar/CourseBar'
 
 function Java() {
   return (
-    <div>Java</div>
+    <div>
+      <CourseBar languageName="Java" />
+    </div>
   )
 }
 

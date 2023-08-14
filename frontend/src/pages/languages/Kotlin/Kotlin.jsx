@@ -1,9 +1,12 @@
 import React from 'react'
 import './Kotlin.css'
+import CourseBar from '../../../components/CourseBar/CourseBar'
 
 function Kotlin() {
   return (
-    <div>Kotlin</div>
+    <div>
+      <CourseBar languageName="Kotlin" />
+    </div>
   )
 }
 

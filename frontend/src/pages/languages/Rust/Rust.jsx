@@ -1,9 +1,12 @@
 import React from 'react'
 import './Rust.css'
+import CourseBar from '../../../components/CourseBar/CourseBar'
 
 function Rust() {
   return (
-    <div>Rust</div>
+    <div>
+      <CourseBar languageName="Rust" />
+    </div>
   )
 }
 

@@ -1,9 +1,12 @@
 import React from 'react'
 import './PHP.css'
+import CourseBar from '../../../components/CourseBar/CourseBar'
 
 function PHP() {
   return (
-    <div>PHP</div>
+    <div>
+      <CourseBar languageName="PHP" />
+    </div>
   )
 }
 

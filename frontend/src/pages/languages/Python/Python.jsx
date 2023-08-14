@@ -1,9 +1,12 @@
 import React from 'react'
 import './Python.css'
+import CourseBar from '../../../components/CourseBar/CourseBar'
 
 function Python() {
   return (
-    <div>Python</div>
+    <div>
+      <CourseBar languageName="Python" />
+    </div>
   )
 }
 
