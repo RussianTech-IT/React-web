@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import './BlogPost.css'
 
-function BlogPost() {
+function BlogPost({ id }) { // maybe id: number
 
   const [text, setText] = useState('');
 

@@ -2,9 +2,9 @@ import React from 'react'
 import './CardBlog.css'
 import { Link } from 'react-router-dom'
 
-function CardBlog({ title, description }) {
+function CardBlog({ id, title, description }) {
     return (
-        <Link className='link-about-card' to={`/article/${title}`}>
+        <Link className='link-about-card' to={`/article/${id}/${title}`}>
             <div className="card-blog">
                 <h3 className="card__title">{title}</h3>
                 <p className="card__content">{description}</p>

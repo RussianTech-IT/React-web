@@ -29,7 +29,7 @@ function Blog() {
         <div className="container-article">
           {posts.map((post, index) => (
             <div key={index}>
-              <CardBlog title={post.title} description={post.description} />
+              <CardBlog id={post.id} title={post.title} description={post.description} />
             </div>
           ))}
         </div>
