@@ -20,7 +20,6 @@ import PHP from '../pages/languages/PHP/PHP'
 import Java from '../pages/languages/Java/Java'
 import Kotlin from '../pages/languages/Kotlin/Kotlin'
 import Rust from '../pages/languages/Rust/Rust'
-import Admin from '../pages/Admin/Admin';
 
 function Router() {
   return (
@@ -43,9 +42,6 @@ function Router() {
         <Route path='/language/java' element={<Java />} />
         <Route path='/language/kotlin' element={<Kotlin />} />
         <Route path='/language/rust' element={<Rust />} />
-
-        {/* route admin dashboard */}
-        <Route path='/admin-panel' element={<Admin />} />
         <Route path='*' element={<div>404</div>} />
       </Routes>
     </Suspense>

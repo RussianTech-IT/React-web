@@ -1,3 +1,25 @@
-.listUsers {
+.blog-component {
+    display: flex;
+    justify-content: center;
+}
+
+.listBlog {
     color: #000;
+}
+
+.header-blog {
+    display: flex;
+    justify-content: center;
+}
+
+.container-article {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .container-article{
+        flex-direction: column;
+    }
 }
