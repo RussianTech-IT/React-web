@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = 5000
-const jsonFile = require("../database/data.json")
+const jsonFile = require("./database/data.json")
 
 // security send requiests header CORS
 app.use((req, res, next) => {
