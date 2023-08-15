@@ -22,9 +22,9 @@ function Blog() {
   return (
     <div className="blog-page">
       <Navbar />
-        <div className="header-blog">
-          <h1>Статьи</h1>
-        </div>
+      <div className="header-blog">
+        <h1>Статьи</h1>
+      </div>
       <div className="blog-component">
         <div className="container-article">
           {posts.map((post, index) => (

@@ -1,3 +1,6 @@
+.link-about-card{
+  text-decoration: none;
+}
 .card-blog {
     --border-radius: 0.75rem;
     --primary-color: #7257fa;

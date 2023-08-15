@@ -1,20 +1,28 @@
 {
   "posts": [
     {
-      "title": "Заголовок статьи 1",
-      "description": "Описание статьи 1"
+      "id": 1,
+      "title": "Release Russian Tech 2023",
+      "description": "Проект запустился, а значит пора заявить о себе!",
+      "text": "sdsdsdsdsdss"
     },
     {
-      "title": "Заголовок статьи 2",
-      "description": "Описание статьи 2"
+      "id": 2,
+      "title": "Дальнейшие планы и как всё будет",
+      "description": "В этой статье разберём планы дальнейшего развития нашей платформы",
+      "text": "sdsdsdsdsdss"
     },
     {
+      "id": 3,
       "title": "Заголовок статьи 3",
-      "description": "Описание статьи 3"
+      "description": "Описание статьи 3",
+      "text": "sdsdsdsdsdss"
     },
     {
+      "id": 3,
       "title": "Заголовок статьи 4",
-      "description": "Описание статьи 5"
+      "description": "Описание статьи 4",
+      "text": "sdsdsdsdsdss"
     }
   ]
 }
