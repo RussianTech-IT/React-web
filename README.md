@@ -3,7 +3,7 @@
 ## Tool & Stack:
 - React
 - fetch API
-- Flask
+- Node.js
 - Docker
 ---
 ## Frontend setup
