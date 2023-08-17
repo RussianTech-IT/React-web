@@ -24,10 +24,9 @@ npm start
 ```
 
 ---
-## Docker run fullstack application
-```
-docker build . -t rutech-reactjs
-docker run -p 3000:3000 -d dockerized-react
-```
+
+<a href="https://github.com/RussianTech-IT/rutech-website/tree/main/docker/docs/Documentation.ipynb">Docker containers documentation 🐳</a>
+
 ---
+
 - ## Happy coding!
