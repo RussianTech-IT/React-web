@@ -11,8 +11,8 @@ services:
     volumes:
       - "../config/nginx/conf.d:/etc/nginx/conf.d"
       - "../config/nginx/errors:/var/www/html/errors"
-      - "../../frontend/build:/front"
-      - "../../admin/build:/admin"
+      - "../../frontend/build:/var/www/html/front"
+      - "../../admin/build:/var/www/html/admin"
 
   backend-full:
     build: "../../backend"
