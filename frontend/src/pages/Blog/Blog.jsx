@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import './Blog.css'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
-// import Loader from '../../components/Loader/Loader'
 import CardBlog from '../../components/CardBlog/CardBlog'
+import Loader from '../../components/Loader/Loader'
 
 function Blog() {
+  const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -13,6 +14,7 @@ function Blog() {
       .then((response) => response.json())
       .then((data) => {
         setPosts(data.posts);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Ошибка получения данных:", error);
@@ -27,20 +29,14 @@ function Blog() {
       </div>
       <div className="blog-component">
         <div className="container-article">
-          {posts.map((post, index) => (
-            <div key={index}>
-              <CardBlog id={post.id} title={post.title} description={post.description} />
-            </div>
-          ))}
+          {loading ? (<Loader />) : (
+            posts.map((post, index) => (
+              <div key={index}>
+                <CardBlog id={post.id} title={post.title} description={post.description} />
+              </div>
+            ))
+          )}
         </div>
-
-        {/* {(typeof backendData.posts === 'undefined') ? (
-        <h1>Loading...</h1>
-      ) : (
-        backendData.posts.map((data, i) => (
-          <CardBlog key={i} title={data} />
-        ))
-      )} */}
       </div>
       <Footer />
     </div>
