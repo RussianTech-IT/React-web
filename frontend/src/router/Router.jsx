@@ -46,8 +46,6 @@ function Router() {
         <Route path='/language/rust' element={<Rust />} />
 
         <Route path="/article/:id/:title" element={<BlogPost />} />
-
-        <Route path='*' element={<div>404</div>} />
       </Routes>
     </Suspense>
   )

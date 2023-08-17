@@ -10,6 +10,7 @@ services:
       - "5000:5000"
     volumes:
       - "../config/nginx/conf.d:/etc/nginx/conf.d"
+      - "../config/nginx/errors:/var/www/html/errors"
       - "../../frontend/build:/front"
       - "../../admin/build:/admin"
 
