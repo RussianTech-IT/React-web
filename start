@@ -1,0 +1,101 @@
+#! /usr/bin/python3
+
+import argparse
+import os
+import sys
+
+def main(args):
+
+    if args.docker:
+        docker = "docker-compose"
+    else:
+        docker = "docker compose"
+
+    if args.full:
+        if args.update:
+            os.chdir(script_path+"/admin")
+            os.system("npm i")
+            os.system("npm run build")
+
+            os.chdir(script_path+"/frontend")
+            os.system("npm i")
+            os.system("npm run build")
+
+            os.chdir(script_path)
+
+        if args.build:
+            os.chdir(script_path+"/docker/full")
+
+            os.system(f"{docker} build")
+
+        if args.start:
+            os.chdir(script_path+"/docker/full")
+
+            os.system(f"{docker} up")
+        
+    else:
+        
+        if args.back:
+            if args.build:
+                os.chdir(script_path+"/docker/back")
+
+                os.system(f"{docker} build")
+
+            if args.start:
+                os.chdir(script_path+"/docker/back")
+                os.system(f"{docker} up")
+            
+        
+        if args.admin:
+            if args.update:
+                os.chdir(script_path+"/admin")
+                os.system("npm i")
+                os.system("npm run build")
+                os.chdir(script_path)
+
+
+        if args.front:
+
+            if args.update:
+                    os.chdir(script_path+"/front")
+                    os.system("npm i")
+                    os.system("npm run build")
+                    os.chdir(script_path)
+
+            if args.build:
+                os.chdir(script_path+"/docker/front")
+
+                os.system(f"{docker} build")
+
+            if args.start:
+                os.chdir(script_path+"/docker/front")
+                os.system(f"{docker} up")
+            
+            
+
+
+
+def create_arg_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument ("-F","--full", action="store_true", default=False, help="selects target full")
+
+    parser.add_argument ("-b","--back", action="store_true", default=False, help="selects target backend")
+    parser.add_argument ("-f","--front", action="store_true", default=False, help="selects target frontend")
+    parser.add_argument ("-a","--admin", action="store_true", default=False, help="selects target full")
+
+    parser.add_argument ("-U","--update", action="store_true", default=False, help="updates the selected target(s)")
+    parser.add_argument ("-S","--start", action="store_true", default=True, help="launches the selected target(s)")
+    parser.add_argument ("-B","--build", action="store_true", default=False, help="build the selected target(s)'s docker files")
+
+    
+    parser.add_argument ("-d", "--docker", action="store_true", default=True, help="set docker compose command to docker-compose")
+    return parser
+
+if __name__ == "__main__":
+    parser = create_arg_parser()
+    args = parser.parse_args()
+
+    script_path = os.getcwd()
+    
+
+    main(args)
