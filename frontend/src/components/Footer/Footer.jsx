@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 
-function Footer() {
+function Footer({ pathIcons }) {
     return (
         <footer className="start-footer">
             <div className="start-container-footer">

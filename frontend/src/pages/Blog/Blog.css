@@ -19,7 +19,12 @@
 }
 
 @media (max-width: 600px) {
+    .header-blog{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     .container-article{
+        display: flex;
         flex-direction: column;
     }
 }
