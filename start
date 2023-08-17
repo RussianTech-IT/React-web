@@ -34,16 +34,32 @@ def main(args):
             os.system(f"{docker} up")
         
     else:
-        
-        if args.back:
+        if args.front:
+
+            if args.update:
+                    os.chdir(script_path+"/frontend")
+                    os.system("npm i")
+                    os.system("npm run build")
+                    os.chdir(script_path)
+
             if args.build:
-                os.chdir(script_path+"/docker/back")
+                os.chdir(script_path+"/docker/frontend")
 
                 os.system(f"{docker} build")
 
             if args.start:
-                os.chdir(script_path+"/docker/back")
-                os.system(f"{docker} up")
+                os.chdir(script_path+"/docker/frontend")
+                os.system(f"{docker} up -d")
+        
+        if args.back:
+            if args.build:
+                os.chdir(script_path+"/docker/backend")
+
+                os.system(f"{docker} build")
+
+            if args.start:
+                os.chdir(script_path+"/docker/backend")
+                os.system(f"{docker} up -d")
             
         
         if args.admin:
@@ -52,24 +68,7 @@ def main(args):
                 os.system("npm i")
                 os.system("npm run build")
                 os.chdir(script_path)
-
-
-        if args.front:
-
-            if args.update:
-                    os.chdir(script_path+"/front")
-                    os.system("npm i")
-                    os.system("npm run build")
-                    os.chdir(script_path)
-
-            if args.build:
-                os.chdir(script_path+"/docker/front")
-
-                os.system(f"{docker} build")
-
-            if args.start:
-                os.chdir(script_path+"/docker/front")
-                os.system(f"{docker} up")
+        
             
             
 
@@ -88,7 +87,7 @@ def create_arg_parser():
     parser.add_argument ("-B","--build", action="store_true", default=False, help="build the selected target(s)'s docker files")
 
     
-    parser.add_argument ("-d", "--docker", action="store_true", default=True, help="set docker compose command to docker-compose")
+    parser.add_argument ("-d", "--docker", action="store_true", default=False, help="set docker compose command to docker-compose")
     return parser
 
 if __name__ == "__main__":

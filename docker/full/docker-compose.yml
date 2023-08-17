@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  frontend-full:
+    image: nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "5000:5000"
+    volumes:
+      - "../config/nginx/conf.d:/etc/nginx/conf.d"
+      - "../../frontend/build:/front"
+      - "../../admin/build:/admin"
+
+  backend-full:
+    build: "../../backend"
+    restart: always
+    volumes:
+      - "../../backend:/app"
