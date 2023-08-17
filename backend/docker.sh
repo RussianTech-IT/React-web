@@ -1,2 +1,2 @@
 docker build -t backend .
-docker run --name rutech-backend -d -p 3000:3000 backend
+docker run --name rutech-backend -d -p 5000:5000 backend

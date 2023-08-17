@@ -7,7 +7,7 @@ function BlogPost() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/posts")
+    fetch("http://localhost:5000/api/posts", { method: 'GET' })
       .then((response) => response.json())
       .then((data) => {
         setPosts(data.posts);
@@ -23,7 +23,7 @@ function BlogPost() {
   return (
     <div>
       s
-      <h1>{post.text}</h1>
+      <h1>{post?.text}</h1>
     </div>
   );
 }
