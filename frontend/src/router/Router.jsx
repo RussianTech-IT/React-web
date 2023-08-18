@@ -6,6 +6,7 @@ import Loader from '../../src/components/Loader/Loader'
 import Home from '../pages/Home/Home'
 import About from '../pages/About/About'
 import Blog from '../pages/Blog/Blog';
+import BlogPost from '../pages/BlogPost/BlogPost'
 import Feedback from '../pages/Feedback/Feedback';
 
 // import languages pages
@@ -20,8 +21,6 @@ import PHP from '../pages/languages/PHP/PHP'
 import Java from '../pages/languages/Java/Java'
 import Kotlin from '../pages/languages/Kotlin/Kotlin'
 import Rust from '../pages/languages/Rust/Rust'
-
-import BlogPost from '../pages/BlogPost/BlogPost'
 
 function Router() {
   return (
@@ -44,7 +43,6 @@ function Router() {
         <Route path='/language/java' element={<Java />} />
         <Route path='/language/kotlin' element={<Kotlin />} />
         <Route path='/language/rust' element={<Rust />} />
-
         <Route path="/article/:id/:title" element={<BlogPost />} />
       </Routes>
     </Suspense>
