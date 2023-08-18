@@ -22,6 +22,9 @@ import Java from '../pages/languages/Java/Java'
 import Kotlin from '../pages/languages/Kotlin/Kotlin'
 import Rust from '../pages/languages/Rust/Rust'
 
+// import errir page status
+import Error from '../pages/Error/Error';
+
 function Router() {
   return (
     <Suspense fallback={<Loader />}>
@@ -44,6 +47,7 @@ function Router() {
         <Route path='/language/kotlin' element={<Kotlin />} />
         <Route path='/language/rust' element={<Rust />} />
         <Route path="/article/:id/:title" element={<BlogPost />} />
+        <Route path="*" component={<Error />} status={404}/>
       </Routes>
     </Suspense>
   )
