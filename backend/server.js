@@ -141,14 +141,59 @@ app.get('/api/posts/:id/:title', (req, res) => {
 });
 
 // logs nginx reverse-proxy server
-app.get('/nginx-logs', (req, res) => {
-  fs.readFile('/var/log/nginx/access.log', 'utf-8', (err, data) => {
-    if (err) {
-      res.status(500).send('Error reading logs');
-    } else {
-      res.send("Logs");
-    }
+app.get('/api/nginxlogs', (req, res) => {
+  const accessPromise = new Promise((resolve, reject) => {
+    fs.readFile('./logs/access.log', 'utf-8', (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
   });
+
+  const adminPromise = new Promise((resolve, reject) => {
+    fs.readFile('./logs/admin.log', 'utf-8', (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+
+  const errorPromise = new Promise((resolve, reject) => {
+    fs.readFile('./logs/error.log', 'utf-8', (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+
+  const sitePromise = new Promise((resolve, reject) => {
+    fs.readFile('./logs/site.log', 'utf-8', (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+
+  Promise.all([accessPromise, adminPromise, errorPromise, sitePromise])
+    .then(([accessData, adminData, errorData, siteData]) => {
+      const logs = { access: accessData, admin: adminData, error: errorData, site: siteData };
+
+      try {
+        JSON.parse(JSON.stringify(logs));
+        res.json(logs);
+      } catch (error) {
+        console.error(error);
+        res.status(500).send({ message: 'Error reading logs' });
+      }
+    });
 });
 
 app.listen(PORT, () => { console.log("Server started in http://localhost:5000") })
