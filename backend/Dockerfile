@@ -4,8 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
-RUN npm i nodemon -D
-RUN npm install -g nodemon
+RUN npm i
+# RUN npm i express
+# RUN npm i nodemon -D
+RUN npm i -g nodemon
+RUN npm i -g express -D
 
 CMD ["npx", "nodemon", "server"]

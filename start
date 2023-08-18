@@ -22,6 +22,9 @@ def main(args):
             os.system("npm i")
             os.system("npm run build")
 
+            
+            # os.system("npm run build")
+
             os.chdir(script_path)
 
         if args.build:
@@ -40,6 +43,8 @@ def main(args):
             if args.update:
                     os.chdir(script_path+"/frontend")
                     os.system("npm i")
+                    os.system("npm i -g nodemon")
+                    os.system("npm i nodemon -D")
                     os.system("npm run build")
                     os.chdir(script_path)
 
@@ -54,6 +59,12 @@ def main(args):
                 post_messages.append("frontend started (default port: 3000)\n")
         
         if args.back:
+            if args.update:
+                os.chdir(script_path+"/backend")
+                os.system("npm i")
+                os.system("npm i -g nodemon")
+                os.system("npm i nodemon -D")
+
             if args.build:
                 os.chdir(script_path+"/docker/backend")
 
@@ -63,6 +74,8 @@ def main(args):
                 os.chdir(script_path+"/docker/backend")
                 os.system(f"{docker} up -d")
                 post_messages.append("backend started (default port: 5000)\n")
+            
+            
             
         
         if args.admin:
@@ -86,7 +99,7 @@ def create_arg_parser():
     parser.add_argument ("-a","--admin", action="store_true", default=False, help="selects target full")
 
     parser.add_argument ("-U","--update", action="store_true", default=False, help="updates the selected target(s)")
-    parser.add_argument ("-S","--start", action="store_true", default=True, help="launches the selected target(s)")
+    parser.add_argument ("-S","--start", action="store_true", default=False, help="launches the selected target(s)")
     parser.add_argument ("-B","--build", action="store_true", default=False, help="build the selected target(s)'s docker files")
 
     

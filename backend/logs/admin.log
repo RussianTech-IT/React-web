@@ -1,0 +1,6 @@
+172.23.0.1 - - [18/Aug/2023:22:15:22 +0000] "GET / HTTP/1.1" 200 674 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+172.23.0.1 - - [18/Aug/2023:22:15:22 +0000] "GET /static/js/main.b67e03ae.js HTTP/1.1" 200 402025 "http://admin.localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+172.23.0.1 - - [18/Aug/2023:22:15:22 +0000] "GET /static/css/main.07a6e487.css HTTP/1.1" 200 12534 "http://admin.localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+172.23.0.1 - - [18/Aug/2023:22:15:22 +0000] "GET /assets/admin_img.png HTTP/1.1" 200 21013 "http://admin.localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+172.23.0.1 - - [18/Aug/2023:22:15:22 +0000] "GET /manifest.json HTTP/1.1" 200 492 "http://admin.localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+172.23.0.1 - - [18/Aug/2023:22:15:22 +0000] "GET /logo192.png HTTP/1.1" 200 5347 "http://admin.localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
