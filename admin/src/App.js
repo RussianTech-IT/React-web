@@ -8,6 +8,7 @@ import Dashboard from "./scenes/dashboard";
 import BlogEdit from "./scenes/BlogEdit/BlogEdit";
 import NginxLogs from "./scenes/NginxLogs/NginxLogs";
 import FAQ from "./scenes/faq";
+import FormDataAdd from "./scenes/FormDataAdd/FormDataAdd";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -26,6 +27,7 @@ function App() {
               <Route path="/blog-edit" element={<BlogEdit />} />
               <Route path="/logs" element={<NginxLogs />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/new-post" element={<FormDataAdd />} />
             </Routes>
           </main>
         </div>
