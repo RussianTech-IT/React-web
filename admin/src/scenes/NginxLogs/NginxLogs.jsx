@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Paper } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import './NginxLogs.css'
@@ -19,16 +19,18 @@ const NginxLogs = () => {
   return (
     <Box m="20px">
       <Header title="Логи" subtitle="Логи NGINX реверс-прокси сервера" />
-      <div className="cmd-logs">
-        {/* <h3>Access Log:</h3> */}
-        <pre>{logs.access}</pre>
-        {/* <h3>Admin Log:</h3> */}
-        <pre>{logs.admin}</pre>
-        {/* <h3>Error Log:</h3> */}
-        <pre>{logs.error}</pre>
-        {/* <h3>Site Log:</h3> */}
-        <pre>{logs.site}</pre>
-      </div>
+      <Paper variant="outlined" style={{ maxHeight: '1000px', overflow: 'auto' }}>
+        <div className="cmd-logs">
+          {/* <h3>Access Log:</h3> */}
+          <pre>{logs.access}</pre>
+          {/* <h3>Admin Log:</h3> */}
+          <pre>{logs.admin}</pre>
+          {/* <h3>Error Log:</h3> */}
+          <pre>{logs.error}</pre>
+          {/* <h3>Site Log:</h3> */}
+          <pre>{logs.site}</pre>
+        </div>
+      </Paper>
     </Box>
   );
 };
