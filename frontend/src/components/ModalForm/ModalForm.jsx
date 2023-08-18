@@ -4,6 +4,7 @@ import './ModalForm.css'
 function ModalForm() {
     const [username, setUsername] = useState('');
     const [text, setText] = useState('');
+    const [isMessageSent, setIsMessageSent] = useState(false);
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -33,6 +34,7 @@ function ModalForm() {
                 // Очищаем поля после отправки
                 setUsername('');
                 setText('');
+                setIsMessageSent(true); // Устанавливаем значение isMessageSent в true после успешной отправки
             })
             .catch((error) => {
                 console.error('Error sending message:', error);
@@ -42,6 +44,7 @@ function ModalForm() {
     return (
         <div className="modal-form">
             <div className="form-container">
+                {/* {isMessageSent && <h1>Сообщение отправлено!</h1>} Отображаем <h1>, если сообщение отправлено */}
                 <p className="title">Feedback</p>
                 <form className="form" onSubmit={handleFormSubmit}>
                     <div className="input-group">
@@ -77,9 +80,16 @@ function ModalForm() {
                 </div>
 
                 <p className="answer-text">Мы ответим вам!</p>
+                {isMessageSent && <div className="success-animation">
+                    <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                    <p className='title-succesfull'>Ваше сообщение успешно отправлено!</p>
+                </div>}
             </div>
         </div>
     )
 }
 
-export default ModalForm
+export default ModalForm;
