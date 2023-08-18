@@ -1,6 +1,7 @@
 const express = require('express')
+require('dotenv').config()
 const app = express()
-const PORT = 5000
+const PORT = process.env.PORT
 const jsonPosts = require("./database/posts.json")
 const fs = require('fs')
 const bodyParser = require('body-parser');
@@ -34,20 +35,15 @@ app.get("/api/posts/:id", (req, res) => {
 // post posts requst
 app.post('/api/posts', (req, res) => {
   try {
-    // Чтение данных из JSON файла
     fs.readFile('./database/posts.json', (err, data) => {
       if (err) {
         console.error(err);
         res.status(500).json({ error: 'Failed to read posts data' });
         return;
       }
-      
+
       const posts = JSON.parse(data);
-
-      // Генерация ID для нового поста
       const newPostId = posts.posts.length + 1;
-
-      // Создание нового поста
       const newPost = {
         id: newPostId,
         title: req.body.title,
@@ -55,17 +51,15 @@ app.post('/api/posts', (req, res) => {
         text: req.body.text,
       };
 
-      // Добавление нового поста в массив
       posts.posts.push(newPost);
 
-      // Запись обновленных данных обратно в JSON файл
       fs.writeFile('./database/posts.json', JSON.stringify(posts), (err) => {
         if (err) {
           console.error(err);
           res.status(500).json({ error: 'Failed to write posts data' });
           return;
         }
-        res.json(newPost); // Отправка нового поста в ответе
+        res.json(newPost);
         console.log("New post added successfully");
       });
     });
@@ -74,7 +68,6 @@ app.post('/api/posts', (req, res) => {
     res.status(500).json({ error: 'Failed to add new post' });
   }
 });
-
 
 // delete posts request
 app.delete('/api/posts/:id', (req, res) => {
@@ -87,8 +80,8 @@ app.delete('/api/posts/:id', (req, res) => {
 
     let postsData = JSON.parse(data);
     let posts = postsData.posts;
-    posts = posts.filter(post => post.id !== postId);
 
+    posts = posts.filter(post => post.id !== postId);
     postsData.posts = posts;
 
     fs.writeFile('./database/posts.json', JSON.stringify(postsData), 'utf8', err => {
@@ -114,7 +107,7 @@ app.put('/api/posts/:id', (req, res) => {
     }
 
     let jsonData = JSON.parse(data);
-    let { posts } = jsonData; // Обратите внимание на это
+    let { posts } = jsonData;
 
     const updatedPosts = posts.map(post => {
       if (post.id === postId) {
@@ -128,7 +121,7 @@ app.put('/api/posts/:id', (req, res) => {
       return post;
     });
 
-    jsonData.posts = updatedPosts; // Обратите внимание на это
+    jsonData.posts = updatedPosts;
 
     fs.writeFile('./database/posts.json', JSON.stringify(jsonData), 'utf8', err => {
       if (err) {
@@ -145,6 +138,17 @@ app.get('/api/posts/:id/:title', (req, res) => {
   const id = parseInt(req.params.id)
   const title = req.params.title
   res.json({ id, title });
+});
+
+// logs nginx reverse-proxy server
+app.get('/nginx-logs', (req, res) => {
+  fs.readFile('/var/log/nginx/access.log', 'utf-8', (err, data) => {
+    if (err) {
+      res.status(500).send('Error reading logs');
+    } else {
+      res.send("Logs");
+    }
+  });
 });
 
 app.listen(PORT, () => { console.log("Server started in http://localhost:5000") })
