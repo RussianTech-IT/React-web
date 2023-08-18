@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import Header from "../../components/Header";
 
-const Invoices = () => {
+const NginxLogs = () => {
   return (
     <Box m="20px">
       <Header title="Логи" subtitle="Логи и прочая информация для сайта" />
@@ -12,4 +12,4 @@ const Invoices = () => {
   );
 };
 
-export default Invoices;
+export default NginxLogs;
