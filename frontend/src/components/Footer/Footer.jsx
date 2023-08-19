@@ -12,9 +12,9 @@ function Footer({ pathIcons }) {
                 <div className="footer-right">
                     <p align="center">Social media</p>
                     <div className="social-media-icons">
-                        <a href="/"><img src="./icons/github.svg" alt="" /></a>
-                        <a href="/"><img src="./icons/vk.svg" alt="" /></a>
-                        <a href="/"><img src="./icons/telegram.svg" alt="" /></a>
+                        <a href="https://github.com/RussianTech-IT"><img src="./icons/github.svg" alt="" /></a>
+                        <a href="https://vk.com/rustechit"><img src="./icons/vk.svg" alt="" /></a>
+                        <a href="https://t.me/rutech_it"><img src="./icons/telegram.svg" alt="" /></a>
                     </div>
                     <br /><hr /><br />
                     <div className="footer-email">
