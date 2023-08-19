@@ -17,13 +17,12 @@ const FAQ = () => {
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography color={colors.greenAccent[500]} variant="h5">
-            An Important Question
+            Позже заполним какими-то инструкциями
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Чтобы в случае чего добавления новых сервисов как дока шла
           </Typography>
         </AccordionDetails>
       </Accordion>

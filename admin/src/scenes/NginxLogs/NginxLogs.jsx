@@ -19,7 +19,7 @@ const NginxLogs = () => {
   return (
     <Box m="20px">
       <Header title="Логи" subtitle="Логи NGINX реверс-прокси сервера" />
-      <Paper variant="outlined" style={{ maxHeight: '1000px', overflow: 'auto' }}>
+      <Paper variant="outlined" style={{ maxHeight: '700px', overflow: 'auto' }}>
         <div className="cmd-logs">
           {/* <h3>Access Log:</h3> */}
           <pre>{logs.access}</pre>
