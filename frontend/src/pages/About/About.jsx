@@ -22,7 +22,7 @@ function About() {
                     <CardAbout title="Education" description="Мы помогаем людям осваивать современные языки программирования" />
                     <CardAbout title="Quality" description="Вы сможете ориентироваться в основах программирования, высоконагруженные приложения" />
                     <CardAbout title="Community" description="У нас есть сообщества, где вы можете пообщаться на темы, связанные с вашими интересами" />
-                    <CardAbout title="Frontend" description="" />
+                    <CardAbout title="Blog" description="В наших социальных сетях мы ведём свой блог и рассказываем о новостях в мире IT" />
                     <CardAbout title="Frontend" description="" />
                     <CardAbout title="Frontend" description="" />
                 </div>

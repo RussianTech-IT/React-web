@@ -12,17 +12,17 @@ function Feedback() {
     };
 
     return (
-        <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={variants}
+        <div
             className="feedback-page">
             <Navbar />
-            <div className="form-feedback-page">
+            <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={variants} className="form-feedback-page">
                 <ModalForm />
-            </div>
+            </motion.div>
             <Footer />
-        </motion.div>
+        </div>
     )
 }
 

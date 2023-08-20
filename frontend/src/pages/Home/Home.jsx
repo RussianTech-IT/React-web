@@ -100,13 +100,13 @@ function Home() {
 
   return (
 
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={variants}
+    <div
       className="home">
       <Navbar />
-      <div className="list-language">
+      <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={variants} className="list-language">
         <section>
           {languageList.map((data, index) => (
             <CardLanguage
@@ -119,9 +119,9 @@ function Home() {
             />
           ))}
         </section>
-      </div>
+      </motion.div>
       <Footer />
-    </motion.div>
+    </div>
   )
 }
 
