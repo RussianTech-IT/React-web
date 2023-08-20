@@ -4,7 +4,7 @@ import CourseBar from '../../../components/CourseBar/CourseBar'
 
 function Cpp() {
   return (
-    <div>
+    <div className='cpp-page'>
       <CourseBar languageName="C++" />
     </div>
   )

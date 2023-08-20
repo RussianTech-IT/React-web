@@ -1,0 +1,16 @@
+.cpp-page {
+    background: whitesmoke;
+}
+
+.text-cpp {
+    width: 90%;
+}
+
+.text-course {
+    color: #000;
+}
+
+.content-and-navbar-cpp {
+    display: flex;
+    justify-content: space-between;
+}
