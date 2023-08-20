@@ -104,9 +104,9 @@ function Home() {
       className="home">
       <Navbar />
       <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={variants} className="list-language">
+        initial="hidden"
+        animate="visible"
+        variants={variants} className="list-language">
         <section>
           {languageList.map((data, index) => (
             <CardLanguage
