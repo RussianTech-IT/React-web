@@ -5,9 +5,10 @@ import Start from '../pages/Start/Start'
 import Loader from '../../src/components/Loader/Loader'
 import Home from '../pages/Home/Home'
 import About from '../pages/About/About'
-import Blog from '../pages/Blog/Blog';
 import BlogPost from '../pages/BlogPost/BlogPost'
 import Feedback from '../pages/Feedback/Feedback';
+import Git from '../pages/languages/Git/Git';
+// import Blog from '../pages/Blog/Blog';
 
 // import languages pages
 import Introduction from '../pages/languages/Introduction/Introduction'
@@ -32,10 +33,11 @@ function Router() {
         <Route path='/' element={<Start />} />
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/blog' element={<Blog />} />
+        {/* <Route path='/blog' element={<Blog />} /> */}
         <Route path='/feedback' element={<Feedback />} />
         {/* languages routes */}
         <Route path='/language/introduction' element={<Introduction />} />
+        <Route path='git-course' element={<Git />}/>
         <Route path='/language/python' element={<Python />} />
         <Route path='/language/cpp' element={<Cpp />} />
         <Route path='/language/javascript' element={<JavaScript />} />

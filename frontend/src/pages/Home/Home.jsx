@@ -20,6 +20,13 @@ function Home() {
       to: '/language/introduction'
     },
     {
+      imageSrc: "./icons/git.svg",
+      title: "Git",
+      description: "Система контроля версий",
+      hoverText: "Освойте систему контроля версий Git",
+      to: '/git-course'
+    },
+    {
       imageSrc: "./icons/languages/python.svg",
       title: "Python",
       description: "Введение в язык и принципы работы с ним",

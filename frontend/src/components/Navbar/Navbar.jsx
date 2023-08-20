@@ -12,7 +12,7 @@ function Navbar() {
 				<label htmlFor="menu-toggle" className="menu-icon">&#9776;</label>
 				<ul className="menu">
 					<li><a href="/home">Главная</a></li>
-					<li><a href="/blog">Блог</a></li>
+					{/* <li><a href="/blog">Блог</a></li> */}
 					<li><a href="/about">О нас</a></li>
 					<li><a href="/feedback">Связь</a></li>
 				</ul>
